@@ -11,7 +11,8 @@ ARG         GIT_URL=unknown
 ENV         WEB_UID=1033
 ENV         WEB_GID=1033
 
-RUN         addgroup www-data -g $WEB_GID && adduser www-data -u $WEB_UID -G www-data -D
+#RUN         addgroup www-data -g $WEB_GID && 
+RUN         adduser www-data -u $WEB_UID -G www-data -D
 ENV         WEB_DOCUMENT_ROOT  /app/site/public
 ENV         WEB_DOCUMENT_INDEX index.php
 ENV         WEB_ALIAS_DOMAIN   *.vm
